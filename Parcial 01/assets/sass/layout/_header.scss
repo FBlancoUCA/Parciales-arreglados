@@ -1,0 +1,30 @@
+@use '../base/theme' as t;
+
+header{
+    background-image: url("/assets/images/bg-pattern.png");
+    padding: 1rem 0 3rem 1rem;
+
+    h1{
+        font-family: "Caveat", monoscape;
+        font-size: 5rem;
+    }
+
+
+    .abstract{
+
+        h2  {
+            text-align: center;
+            color: #E5E5E5;
+            font-family: "Montserrat", sans-serif;
+            
+        }
+
+        h3 {
+            text-align: center;
+            color: #E5E5E5;
+            font-family: "Montserrat", sans-serif;
+            font-size: 5rem;
+        }
+
+    }
+}

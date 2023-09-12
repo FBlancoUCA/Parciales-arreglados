@@ -1,0 +1,128 @@
+@use '../base/variables' as v;
+@use '../base/theme' as t;
+@use '../base/mixins' as m;
+
+
+#contact-us {
+    background: url('/assets/images/main-pattern-dark.png');
+
+    @include m.flexbox(center, center);
+    @include m.dimensions(100%);
+    position: relative;
+    min-height: 100vh;
+    padding: 5rem;
+
+    @include m.maxTablet {
+        margin-top: 6rem;
+        padding: .5rem;
+    }
+
+    /*@include m.maxLaptop {
+        grid-template-columns: 1fr;
+        padding: 20px;
+        height: auto;
+    }*/
+    h3{
+        color: t.$text-color;
+    }
+
+    .input-grup {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+        padding: 6rem;
+        @include m.dimensions(90%, 90%);
+        background: t.$primary-color;
+        box-shadow: 1px 9px 20px -5px rgba(0, 0, 0, .59);
+        /*border-radius: t.$border-radius;*/
+
+        @include m.maxTablet {
+            display: block;
+            width: 100%;
+            padding: 5rem 2rem;
+        }
+
+        .contact-form {
+            @include m.flexbox(center, center, column);
+            position: relative;
+            @include m.dimensions(100%);
+
+            .text {
+                width: 80%;
+
+                @include m.maxTablet {
+                    width: 90%;
+                }
+
+                h2 {
+                    color: t.$text-color;
+                }
+
+                p {
+                    color: t.$text-color;
+                }
+            }
+
+            form {
+                @include m.dimensions(80%);
+
+                @include m.maxTablet {
+                    @include m.dimensions(90%);
+                }
+
+                .input-box {
+                    @include m.flexbox(auto, auto, column);
+                    margin-bottom: 15px;
+
+
+                    label {
+                        color: t.$text-color;
+                        font-weight: 700;
+                    }
+
+                    textarea,
+                    input[type="text"],
+                    input[type="email"] {
+                        border: none;
+                        background: t.$light-backdrop-color;
+                        padding: 10px;
+                        /*border-radius: v.$border-radius;*/
+                        color: t.$text-color;
+
+                        /*&::placeholder {
+                            color: v.$whitePink;
+                        }*/
+                    }
+
+
+                    textarea:focus,
+                    input[type="text"]:focus,
+                    input[type="email"]:focus {
+                        outline: 2px solid t.$text-color;
+                    }
+                }
+
+                input[type="submit"] {
+                    background: t.$primary-color-dark;
+                    display: inline-block;
+                    text-align: right;
+                    @include m.dimensions(15rem);
+                    padding: 10px;
+                    /*border-radius: v.$border-radius;*/
+                    color: t.$primary-color;
+                    letter-spacing: 1px;
+                    border: none;
+                    cursor: pointer;
+                    box-shadow: 1px 9px 20px -5px rgba(0, 0, 0, .59);
+                    transition: 0.3s;
+
+                }
+
+                input[type="submit"]:hover {
+                    background: t.$primary-color;
+                    color: t.$text-color;
+                }
+            }
+        }
+    }
+}

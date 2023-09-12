@@ -1,0 +1,67 @@
+@use '../base/theme' as t;
+
+#photos-showcase h3 {
+    background-image: url("/assets/images/main-pattern.png");
+    text-align: center;
+    color: t.$text-color;
+    font-size: 60px;
+    font-family: t.$title-font;
+        }
+    
+    #photos-showcase section {
+        display: flex;
+        flex-direction: row;
+        width: 1200px;
+        height: 430px;
+        }
+        
+    
+    .photo-set figure {
+        display: flex;
+        flex-direction: row;
+    
+        }
+    
+    .photo-set {
+        width: 0px;
+            flex-grow: 1;
+            object-fit: cover;
+            opacity: .8;
+            transition: .5s ease;
+    }
+        
+    .photo-set figure img:hover {
+            cursor: crosshair;
+            width: 300px;
+            opacity: 1;
+            filter: contrast(120%);
+        }
+
+#photos-showcase section {
+    display: flex;
+    flex-direction: row;
+    width: 1200px;
+    height: 430px;
+    }
+    
+
+.photo-set figure {
+    display: flex;
+    flex-direction: row;
+
+    }
+
+.photo-set>img{
+    width: 0px;
+        flex-grow: 1;
+        object-fit: cover;
+        opacity: .8;
+        transition: .5s ease;
+}
+    
+.photo-set figure img:hover {
+        cursor: crosshair;
+        width: 300px;
+        opacity: 1;
+        filter: contrast(120%);
+    }

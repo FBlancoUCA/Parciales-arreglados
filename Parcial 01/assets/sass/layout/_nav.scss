@@ -1,0 +1,21 @@
+//@use '../base/theme' as t;
+//@use '../base/variables' as v;
+
+nav{
+    /*@include v.tablet{
+
+    }*/
+    display: flex;
+    align-items: right;
+
+    a{
+        color: #E5E5E5;
+        font-size: 1rem;
+        display: block;
+        text-align: center;
+    }
+
+    .highlight{
+        background-color: #E5E5E555;
+    }
+}
